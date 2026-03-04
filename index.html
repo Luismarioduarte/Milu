@@ -2,178 +2,29 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Mileidys 💜</title>
-    <style>
-        :root {
-            --lila: #c8a2c8;
-            --verde-oliva: #708238;
-            --blanco: #ffffff;
-            --texto: #2f3629;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            margin: 0;
-            background-color: #fdfdfd;
-            color: var(--texto);
-        }
-
-        /* HEADER Y NAV */
-        .hero {
-            background: linear-gradient(135deg, var(--lila), var(--verde-oliva));
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .navbar {
-            background-color: var(--verde-oliva);
-            display: flex;
-            justify-content: center;
-            padding: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-top: 60px;
-        }
-
-        /* ==========================================
-           ESTILO SECCIÓN VIAJES (Tipo Postal)
-           ========================================== */
-        #viajes h2 { color: var(--verde-oliva); }
-
-        .card-viaje {
-            background: #f4f1ea; /* Color crema tipo papel antiguo */
-            border: 8px solid white;
-            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
-            margin-bottom: 50px;
-            transform: rotate(-1deg); /* Ligera inclinación para efecto postal */
-            transition: 0.3s;
-        }
-
-        .card-viaje:hover { transform: rotate(0deg); }
-
-        .card-viaje img { width: 100%; display: block; filter: sepia(10%); }
-
-        .footer-viaje {
-            padding: 25px;
-            border-top: 2px dashed var(--verde-oliva);
-            position: relative;
-        }
-
-        .footer-viaje p {
-            font-family: 'Georgia', serif;
-            font-size: 1.2rem;
-            color: var(--verde-oliva);
-        }
-
-        /* ==========================================
-           ESTILO SECCIÓN MOMENTOS (Tipo Moderno/Lila)
-           ========================================== */
-        #momentos h2 { color: var(--lila); }
-
-        .card-momento {
-            background: white;
-            border-radius: 30px; /* Bordes muy redondeados */
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(200, 162, 200, 0.2);
-            margin-bottom: 50px;
-            border: 2px solid var(--lila);
-        }
-
-        .card-momento video, .card-momento img { width: 100%; display: block; }
-
-        .footer-momento {
-            padding: 25px;
-            background: linear-gradient(to bottom, #ffffff, #f9f2f9);
-            text-align: center;
-        }
-
-        .footer-momento p {
-            font-size: 1.1rem;
-            color: #7a5a7a;
-            font-weight: 500;
-        }
-
-        footer {
-            text-align: center;
-            padding: 60px;
-            color: var(--lila);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="hero">
-        <h1>Para Mileidys 💜</h1>
-        <p>Cada rincón de este sitio cuenta nuestra historia</p>
-    </header>
+<header class="hero">
+    <h1>Para Mileidys 💜</h1>
+    <p>Cada rincón de este sitio cuenta nuestra historia</p>
+</header>
 
-    <nav class="navbar">
-        <a href="#viajes">🌍 Viajes</a>
-        <a href="#momentos">✨ Momentos</a>
-    </nav>
+<nav class="navbar">
+    <a href="viajes.html">🌍 Viajes</a>
+    <a href="momentos.html">✨ Momentos</a>
+</nav>
 
-    <div class="container">
-        
-        <section id="viajes">
-            <h2>Nuestras Aventuras</h2>
-            
-            <div class="card-viaje">
-                <img src="fotos/viaje1.jpg" alt="Viaje">
-                <div class="footer-viaje">
-                    <p>📍 <b>Lugar del Viaje:</b> El día que conquistamos el mundo juntos. Este recuerdo vive en mi mente como si fuera ayer.</p>
-                </div>
-            </div>
-        </section>
+<div class="container" style="text-align:center;">
+    <h2>Bienvenida a nuestro espacio</h2>
+    <p>Explora nuestras aventuras y revive cada instante especial.</p>
+</div>
 
-        <section id="momentos">
-            <h2>Instantes Eternos</h2>
-
-            <div class="card-momento">
-                <video controls>
-                    <source src="videos/video1.mp4" type="video/mp4">
-                    Tu navegador no soporta video.
-                </video>
-                <div class="footer-momento">
-                    <p>💜 "No son solo segundos, es vida contigo." 💜</p>
-                </div>
-            </div>
-
-            <div class="card-momento">
-                <img src="fotos/momento1.jpg" alt="Momento especial">
-                <div class="footer-momento">
-                    <p>Una tarde cualquiera que tú hiciste extraordinaria.</p>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <footer>
-        Hecho con amor infinito para Mileidys 💜 2026
-    </footer>
+<footer>
+    Hecho con amor infinito 💜 
+</footer>
 
 </body>
 </html>
