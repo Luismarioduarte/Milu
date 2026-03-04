@@ -1,41 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Mileidys 💜</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mileidys 💜</title>
+    <style>
+        /* Estilos integrados para asegurar que los colores se vean perfectos */
+        :root {
+            --lila: #c8a2c8;
+            --verde-oliva: #708238;
+            --blanco: #ffffff;
+            --texto-oscuro: #4b5d3b;
+        }
 
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--blanco);
+            color: var(--texto-oscuro);
+            line-height: 1.6;
+        }
+
+        /* Encabezado con degradado */
+        .hero {
+            background: linear-gradient(135deg, var(--lila) 0%, var(--verde-oliva) 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 { margin: 0; font-size: 2.5rem; }
+        .hero p { font-style: italic; opacity: 0.9; }
+
+        /* Navegación */
+        .navbar {
+            background-color: var(--verde-oliva);
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover { color: var(--lila); }
+
+        /* Contenedor de Secciones */
+        .section-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: var(--verde-oliva);
+            text-align: center;
+            border-bottom: 2px solid var(--lila);
+            padding-bottom: 10px;
+            margin-top: 50px;
+        }
+
+        /* Estilo de Tarjetas (Cards) para Fotos y Videos */
+        .memory-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            border: 1px solid #eee;
+        }
+
+        .memory-card img, .memory-card video {
+            width: 100%;
+            display: block;
+            max-height: 500px;
+            object-fit: cover;
+        }
+
+        .memory-footer {
+            padding: 20px;
+            background-color: white;
+        }
+
+        .memory-footer p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: var(--texto-oscuro);
+            border-left: 4px solid var(--lila);
+            padding-left: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #f9f9f9;
+            color: var(--lila);
+            font-weight: bold;
+        }
+    </style>
+</head>
 <body>
 
-<header class="hero">
-<h1>Para Mileidys 💜</h1>
-<p>Nuestro rincón eterno de recuerdos</p>
-</header>
+    <header class="hero">
+        <h1>Para Mileidys 💜</h1>
+        <p>Nuestro rincón eterno de recuerdos</p>
+    </header>
 
-<nav class="navbar">
-<a href="#viajes">Viajes</a>
-<a href="#momentos">Momentos</a>
-</nav>
+    <nav class="navbar">
+        <a href="#viajes">Viajes</a>
+        <a href="#momentos">Momentos</a>
+    </nav>
 
-<section id="viajes">
-<h2>🌍 Viajes</h2>
-<img src="assets/fotos/viaje1.jpg">
-<p>El día que entendí que el destino más hermoso eres tú.</p>
-</section>
+    <div class="section-container">
+        
+        <section id="viajes">
+            <h2>🌍 Nuestros Viajes</h2>
 
-<section id="momentos">
-<h2>✨ Momentos</h2>
-<video controls>
-<source src="assets/videos/video1.mp4" type="video/mp4">
-</video>
-<p>Un instante eterno guardado en nuestro corazón.</p>
-</section>
+            <div class="memory-card">
+                <img src="assets/fotos/viaje1.jpg" alt="Nuestro Viaje">
+                <div class="memory-footer">
+                    <p>El día que entendí que el destino más hermoso eres tú. ¡Un viaje inolvidable!</p>
+                </div>
+            </div>
 
-<footer>
-<p>Hecho con amor para Mileidys 💜</p>
-</footer>
+            <div class="memory-card">
+                <img src="assets/fotos/viaje2.jpg" alt="Otro lugar">
+                <div class="memory-footer">
+                    <p>Aquí pones el comentario de tu segundo viaje con Miliedys.</p>
+                </div>
+            </div>
+            </section>
+
+        <section id="momentos">
+            <h2>✨ Momentos Únicos</h2>
+
+            <div class="memory-card">
+                <video controls>
+                    <source src="assets/videos/video1.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+                <div class="memory-footer">
+                    <p>Un instante eterno guardado en nuestro corazón. Cada segundo a tu lado cuenta.</p>
+                </div>
+            </div>
+
+            <div class="memory-card">
+                <img src="assets/fotos/comida1.jpg" alt="Cena">
+                <div class="memory-footer">
+                    <p>Esa cena donde no podíamos dejar de reír. Te amo, Milu.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Hecho con amor para Mileidys 💜</p>
+    </footer>
 
 </body>
 </html>
