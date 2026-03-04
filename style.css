@@ -1,0 +1,120 @@
+:root {
+    --lila: #c8a2c8;
+    --verde-oliva: #708238;
+    --blanco: #ffffff;
+    --texto: #2f3629;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    background-color: #fdfdfd;
+    color: var(--texto);
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, var(--lila), var(--verde-oliva));
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.navbar {
+    background-color: var(--verde-oliva);
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--lila);
+}
+
+/* CONTENIDO */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+/* TARJETAS VIAJE */
+.card-viaje {
+    background: #f4f1ea;
+    border: 8px solid white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 50px;
+    transform: rotate(-1deg);
+    transition: 0.3s;
+}
+
+.card-viaje:hover {
+    transform: rotate(0deg);
+}
+
+.card-viaje img {
+    width: 100%;
+    display: block;
+    filter: sepia(10%);
+}
+
+.footer-viaje {
+    padding: 25px;
+    border-top: 2px dashed var(--verde-oliva);
+}
+
+.footer-viaje p {
+    font-family: 'Georgia', serif;
+    font-size: 1.2rem;
+    color: var(--verde-oliva);
+}
+
+/* TARJETAS MOMENTOS */
+.card-momento {
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(200, 162, 200, 0.2);
+    margin-bottom: 50px;
+    border: 2px solid var(--lila);
+}
+
+.card-momento video,
+.card-momento img {
+    width: 100%;
+    display: block;
+}
+
+.footer-momento {
+    padding: 25px;
+    background: linear-gradient(to bottom, #ffffff, #f9f2f9);
+    text-align: center;
+}
+
+.footer-momento p {
+    font-size: 1.1rem;
+    color: #7a5a7a;
+    font-weight: 500;
+}
+
+footer {
+    text-align: center;
+    padding: 60px;
+    color: var(--lila);
+}
