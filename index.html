@@ -5,35 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Mileidys 💜</title>
     <style>
-        /* Estilos integrados para asegurar que los colores se vean perfectos */
         :root {
             --lila: #c8a2c8;
             --verde-oliva: #708238;
             --blanco: #ffffff;
-            --texto-oscuro: #4b5d3b;
+            --texto: #4b5d3b;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 0;
             background-color: var(--blanco);
-            color: var(--texto-oscuro);
-            line-height: 1.6;
+            color: var(--texto);
         }
 
-        /* Encabezado con degradado */
         .hero {
-            background: linear-gradient(135deg, var(--lila) 0%, var(--verde-oliva) 100%);
+            background: linear-gradient(135deg, var(--lila), var(--verde-oliva));
             color: white;
             text-align: center;
             padding: 60px 20px;
         }
 
-        .hero h1 { margin: 0; font-size: 2.5rem; }
-        .hero p { font-style: italic; opacity: 0.9; }
-
-        /* Navegación */
         .navbar {
             background-color: var(--verde-oliva);
             display: flex;
@@ -42,6 +34,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .navbar a {
@@ -49,60 +42,54 @@
             text-decoration: none;
             margin: 0 20px;
             font-weight: bold;
-            transition: 0.3s;
         }
 
-        .navbar a:hover { color: var(--lila); }
-
-        /* Contenedor de Secciones */
-        .section-container {
+        .container {
             max-width: 800px;
             margin: 40px auto;
-            padding: 0 20px;
+            padding: 20px;
         }
 
         h2 {
-            color: var(--verde-oliva);
             text-align: center;
+            color: var(--verde-oliva);
             border-bottom: 2px solid var(--lila);
             padding-bottom: 10px;
             margin-top: 50px;
         }
 
-        /* Estilo de Tarjetas (Cards) para Fotos y Videos */
-        .memory-card {
+        /* Tarjetas de recuerdos */
+        .card {
             background: white;
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
             margin-bottom: 40px;
-            border: 1px solid #eee;
+            border: 1px solid #f0f0f0;
         }
 
-        .memory-card img, .memory-card video {
+        .card img, .card video {
             width: 100%;
             display: block;
-            max-height: 500px;
-            object-fit: cover;
         }
 
-        .memory-footer {
-            padding: 20px;
-            background-color: white;
+        .card-footer {
+            padding: 25px;
         }
 
-        .memory-footer p {
+        .card-footer p {
             margin: 0;
             font-size: 1.1rem;
-            color: var(--texto-oscuro);
+            line-height: 1.6;
             border-left: 4px solid var(--lila);
             padding-left: 15px;
+            font-style: italic;
         }
 
         footer {
             text-align: center;
-            padding: 40px;
-            background: #f9f9f9;
+            padding: 50px;
+            background-color: #fcfcfc;
             color: var(--lila);
             font-weight: bold;
         }
@@ -120,43 +107,29 @@
         <a href="#momentos">Momentos</a>
     </nav>
 
-    <div class="section-container">
+    <div class="container">
         
         <section id="viajes">
             <h2>🌍 Nuestros Viajes</h2>
-
-            <div class="memory-card">
-                <img src="assets/fotos/viaje1.jpg" alt="Nuestro Viaje">
-                <div class="memory-footer">
-                    <p>El día que entendí que el destino más hermoso eres tú. ¡Un viaje inolvidable!</p>
+            
+            <div class="card">
+                <img src="fotos/viaje1.jpg" alt="Recuerdo de viaje">
+                <div class="card-footer">
+                    <p>El día que entendí que el destino más hermoso eres tú. ¡Gracias por cada kilómetro a mi lado! 😍</p>
                 </div>
             </div>
-
-            <div class="memory-card">
-                <img src="assets/fotos/viaje2.jpg" alt="Otro lugar">
-                <div class="memory-footer">
-                    <p>Aquí pones el comentario de tu segundo viaje con Miliedys.</p>
-                </div>
-            </div>
-            </section>
+        </section>
 
         <section id="momentos">
-            <h2>✨ Momentos Únicos</h2>
+            <h2>✨ Momentos Especiales</h2>
 
-            <div class="memory-card">
+            <div class="card">
                 <video controls>
-                    <source src="assets/videos/video1.mp4" type="video/mp4">
-                    Tu navegador no soporta videos.
+                    <source src="videos/video1.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
                 </video>
-                <div class="memory-footer">
-                    <p>Un instante eterno guardado en nuestro corazón. Cada segundo a tu lado cuenta.</p>
-                </div>
-            </div>
-
-            <div class="memory-card">
-                <img src="assets/fotos/comida1.jpg" alt="Cena">
-                <div class="memory-footer">
-                    <p>Esa cena donde no podíamos dejar de reír. Te amo, Milu.</p>
+                <div class="card-footer">
+                    <p>Un instante eterno guardado en nuestro corazón. Por mil momentos más así. 💜</p>
                 </div>
             </div>
         </section>
@@ -164,7 +137,7 @@
     </div>
 
     <footer>
-        <p>Hecho con amor para Mileidys 💜</p>
+        Hecho con todo mi amor para Mileidys 💜 2026
     </footer>
 
 </body>
