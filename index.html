@@ -9,21 +9,22 @@
             --lila: #c8a2c8;
             --verde-oliva: #708238;
             --blanco: #ffffff;
-            --texto: #4b5d3b;
+            --texto: #2f3629;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
             margin: 0;
-            background-color: var(--blanco);
+            background-color: #fdfdfd;
             color: var(--texto);
         }
 
+        /* HEADER Y NAV */
         .hero {
             background: linear-gradient(135deg, var(--lila), var(--verde-oliva));
             color: white;
             text-align: center;
-            padding: 60px 20px;
+            padding: 50px 20px;
         }
 
         .navbar {
@@ -34,7 +35,6 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .navbar a {
@@ -42,56 +42,84 @@
             text-decoration: none;
             margin: 0 20px;
             font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .container {
-            max-width: 800px;
-            margin: 40px auto;
+            max-width: 900px;
+            margin: auto;
             padding: 20px;
         }
 
         h2 {
             text-align: center;
-            color: var(--verde-oliva);
-            border-bottom: 2px solid var(--lila);
-            padding-bottom: 10px;
-            margin-top: 50px;
+            font-size: 2.5rem;
+            margin-top: 60px;
         }
 
-        /* Tarjetas de recuerdos */
-        .card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
-            border: 1px solid #f0f0f0;
+        /* ==========================================
+           ESTILO SECCIÓN VIAJES (Tipo Postal)
+           ========================================== */
+        #viajes h2 { color: var(--verde-oliva); }
+
+        .card-viaje {
+            background: #f4f1ea; /* Color crema tipo papel antiguo */
+            border: 8px solid white;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+            transform: rotate(-1deg); /* Ligera inclinación para efecto postal */
+            transition: 0.3s;
         }
 
-        .card img, .card video {
-            width: 100%;
-            display: block;
-        }
+        .card-viaje:hover { transform: rotate(0deg); }
 
-        .card-footer {
+        .card-viaje img { width: 100%; display: block; filter: sepia(10%); }
+
+        .footer-viaje {
             padding: 25px;
+            border-top: 2px dashed var(--verde-oliva);
+            position: relative;
         }
 
-        .card-footer p {
-            margin: 0;
+        .footer-viaje p {
+            font-family: 'Georgia', serif;
+            font-size: 1.2rem;
+            color: var(--verde-oliva);
+        }
+
+        /* ==========================================
+           ESTILO SECCIÓN MOMENTOS (Tipo Moderno/Lila)
+           ========================================== */
+        #momentos h2 { color: var(--lila); }
+
+        .card-momento {
+            background: white;
+            border-radius: 30px; /* Bordes muy redondeados */
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(200, 162, 200, 0.2);
+            margin-bottom: 50px;
+            border: 2px solid var(--lila);
+        }
+
+        .card-momento video, .card-momento img { width: 100%; display: block; }
+
+        .footer-momento {
+            padding: 25px;
+            background: linear-gradient(to bottom, #ffffff, #f9f2f9);
+            text-align: center;
+        }
+
+        .footer-momento p {
             font-size: 1.1rem;
-            line-height: 1.6;
-            border-left: 4px solid var(--lila);
-            padding-left: 15px;
-            font-style: italic;
+            color: #7a5a7a;
+            font-weight: 500;
         }
 
         footer {
             text-align: center;
-            padding: 50px;
-            background-color: #fcfcfc;
+            padding: 60px;
             color: var(--lila);
-            font-weight: bold;
         }
     </style>
 </head>
@@ -99,37 +127,44 @@
 
     <header class="hero">
         <h1>Para Mileidys 💜</h1>
-        <p>Nuestro rincón eterno de recuerdos</p>
+        <p>Cada rincón de este sitio cuenta nuestra historia</p>
     </header>
 
     <nav class="navbar">
-        <a href="#viajes">Viajes</a>
-        <a href="#momentos">Momentos</a>
+        <a href="#viajes">🌍 Viajes</a>
+        <a href="#momentos">✨ Momentos</a>
     </nav>
 
     <div class="container">
         
         <section id="viajes">
-            <h2>🌍 Nuestros Viajes</h2>
+            <h2>Nuestras Aventuras</h2>
             
-            <div class="card">
-                <img src="fotos/viaje1.jpg" alt="Recuerdo de viaje">
-                <div class="card-footer">
-                    <p>El día que entendí que el destino más hermoso eres tú. ¡Gracias por cada kilómetro a mi lado! 😍</p>
+            <div class="card-viaje">
+                <img src="fotos/viaje1.jpg" alt="Viaje">
+                <div class="footer-viaje">
+                    <p>📍 <b>Lugar del Viaje:</b> El día que conquistamos el mundo juntos. Este recuerdo vive en mi mente como si fuera ayer.</p>
                 </div>
             </div>
         </section>
 
         <section id="momentos">
-            <h2>✨ Momentos Especiales</h2>
+            <h2>Instantes Eternos</h2>
 
-            <div class="card">
+            <div class="card-momento">
                 <video controls>
                     <source src="videos/video1.mp4" type="video/mp4">
-                    Tu navegador no soporta el video.
+                    Tu navegador no soporta video.
                 </video>
-                <div class="card-footer">
-                    <p>Un instante eterno guardado en nuestro corazón. Por mil momentos más así. 💜</p>
+                <div class="footer-momento">
+                    <p>💜 "No son solo segundos, es vida contigo." 💜</p>
+                </div>
+            </div>
+
+            <div class="card-momento">
+                <img src="fotos/momento1.jpg" alt="Momento especial">
+                <div class="footer-momento">
+                    <p>Una tarde cualquiera que tú hiciste extraordinaria.</p>
                 </div>
             </div>
         </section>
@@ -137,7 +172,7 @@
     </div>
 
     <footer>
-        Hecho con todo mi amor para Mileidys 💜 2026
+        Hecho con amor infinito para Mileidys 💜 2026
     </footer>
 
 </body>
